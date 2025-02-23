@@ -1,19 +1,17 @@
 import java.util.Scanner;
-class StringPalindrome
-{
-	public static void main(String args[])
-	{
+class StringPalindrome{
+	public static void main(String args[]){
 		Scanner sc=new Scanner(System.in);
-		System.out.println("Enter the String : ");
+		System.out.print("Enter the String:");
 		String str=sc.nextLine();
-		String rev=new StringBuffer(str).reverse().toString();
-		if(str.equals(rev))
-		{
-			System.out.println("Palindrome String..");
+		String rev="";
+		for(int i=str.length()-1;i>=0;i--){
+			rev=rev+str.charAt(i);
 		}
-		else
-		{
-			System.out.println("Not a Palindrome String..");
+		if(str.equals(rev)){
+			System.out.print("It is a Palindrome...");
+		}else{
+			System.out.print("It is not a Palindrome...");
 		}
 	}
 }
